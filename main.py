@@ -1,6 +1,5 @@
 # Sistema de Calificaciones USB. Sumar calificaciones USB y Creditos Inscritos. Calcular el promedio actual.  Identifica Estado de PP.
-# Implementar dataclass en futuras versiones:
-# Agregar Interfaz Grafica, Estadisticas de Materias Fuertes Y debiles para recomendar en cuales debe enfocarse, Calcular Notas Minimas Requeridas para mantener el promedio.
+# Features a desarrollar: Agregar Interfaz Grafica, Estadisticas de Materias o ramas Fuertes Y debiles para recomendar en cuales debe enfocarse, Simulador para probar notas. Modificar creditos y nota de materia.
 # Si es la primera vez que el usuario abre el programa (no existe archivo csv) que le pida ingresar materias.
 
 # ============== Modelos ============= #
