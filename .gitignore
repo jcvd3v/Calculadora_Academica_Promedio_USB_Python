@@ -1,0 +1,27 @@
+# Entornos Virtuales
+venv/
+env/
+*.venv
+
+# Python
+__pycache__/
+*.py.class
+*$py.class
+*.py[cod]
+*.so
+.Python
+
+# IDE
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Archivos Generados
+*.log
+*.sqlite3
+
+# Variable de entorno
+.env
+.env.local
