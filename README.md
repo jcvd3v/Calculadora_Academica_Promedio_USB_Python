@@ -17,11 +17,6 @@ Una herramienta diseñada para que los estudiantes de la Universidad Simón Boli
     git clone "link"
     cd calculadora-usb
 
-2. Configura el entorno(opcional pero recomendado):
-
-    python -m venv
-    venv\Scripts\Activate.ps1
-
-3. Instalación de dependencias:
+2. Instalación de dependencias:
 
     pip install -r requirements.txt

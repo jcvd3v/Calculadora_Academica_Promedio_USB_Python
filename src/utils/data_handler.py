@@ -15,6 +15,12 @@ def escribir_materia(codigo, creditos, nota):
     with open('data\materias_test.csv', 'a', newline='', encoding='utf-8') as archivo:
         escritor = csv.writer(archivo)
         escritor.writerow(datos)
+
+def borrar_materia(materias_restantes)
+    datos = materias
+    with open('data\materias_test.csv', 'w', newline='', encoding='utf-8') as archivo:
+        escritor = csv.writer(archivo)
+        escritor.writerow(datos)
 '''
 def borrar_materia(codigo):
     materias = leer_materias()

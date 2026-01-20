@@ -33,4 +33,4 @@ class Calculadora:
     def eliminar_materia(self):
         codigo = input("ID: ")
         self.materias = [m for m in self.materias if m.codigo != codigo]
-        #dh.borrar_materia(codigo)
+        dh.borrar_materia(self.materias)
