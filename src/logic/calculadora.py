@@ -29,7 +29,6 @@ class Calculadora:
         nota = int(input("Nota Obtenida: "))
         self.materias.append(Materia(codigo, creditos, nota))
         dh.escribir_materia(codigo, float(creditos), float(nota))
-
     def eliminar_materia(self):
         codigo = input("ID: ")
         self.materias = [m for m in self.materias if m.codigo != codigo]

@@ -2,27 +2,19 @@
 # agrega materias (no a la base de datos solo a la simulacion) y permite probar distintas notas y saca la cuenta para decir si aprueba o no con eso
 # ============== Modelos ============= #
 from materia import Materia
-from usuario import Usuario
 
 # ============== Servicios ============= #
-from calculadora import Calculadora
+from src.logic.calculadora import Calculadora
+import src.utils.data_handler as dh
 
-# ============== Base de Datos ============= #
-import database
-
-materias = database.materias_cursadas()
+materias_cursadas = dh.leer_materias()
 materias_en_curso = []
-calculadora = Calculadora(materias)
+calculadora = Calculadora(materias_cursadas)
 promedio_minimo = 3
 promedio_actual = (calculadora.promedio())
 promedio_simulado = 0
 
-for materia in materias:
+for materia in materias_cursadas:
     print (materia.creditos, materia.nota)
-
-def agregar_materia():
-    codigo = input("ID: ")
-    creditos = int(input("Creditos: "))
-    nota = int(input("Nota Obtenida: "))
-        materias.append(Materia(codigo, creditos, nota))
+calculadora.agregar_materia()
 
