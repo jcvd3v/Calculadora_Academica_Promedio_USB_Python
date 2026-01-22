@@ -14,9 +14,10 @@ Una herramienta diseñada para que los estudiantes de la Universidad Simón Boli
 # Instalacion
 
 1. Clona el repositorio:
-
-    git clone https://github.com/jcvd3v/Calculadora_Academica_Promedio_USB_Python.git
-
+```bash
+git clone https://github.com/jcvd3v/Calculadora_Academica_Promedio_USB_Python.git
+```
 2. Instalación de dependencias:
-
-    pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
+```
