@@ -14,7 +14,7 @@ materias = dh.leer_materias()
 if __name__ == "__main__":
     calculadora = Calculadora(materias)
     while True:
-        print("Opciones:\n1. Ver materias\n2. Ver Status\n3. Agregar materia\n4. Eliminar materia\n5. Modificar materia\n0 Salir")
+        print("Opciones:\n1. Ver materias\n2. Ver Status\n3. Agregar materia\n4. Eliminar materia\n5. Modificar materia\n6 Ver estadisticas\n0 Salir")
         entrada = input("Elija una opción: ")
         if entrada == "1":
             calculadora.mostrar_materias()
@@ -27,8 +27,10 @@ if __name__ == "__main__":
             calculadora.eliminar_materia()
         elif entrada == "5":
             calculadora.modificar_materia()
+        elif entrada == "6":
+            calculadora.ver_estadisticas()
         elif entrada == "0":
-            exit
+            exit()
         else:
             print("Opcion no valida")
     
