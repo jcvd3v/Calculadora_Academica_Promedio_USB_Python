@@ -1,5 +1,4 @@
 import csv
-import pandas as pd
 from src.models.materia import Materia
 
 def leer_materias():
@@ -12,12 +11,12 @@ def leer_materias():
 
 def escribir_materia(codigo, creditos, nota):
     datos = [codigo, creditos, nota]
-    with open('data\materias_test.csv', 'a', newline='', encoding='utf-8') as archivo:
+    with open('data\materias.csv', 'a', newline='', encoding='utf-8') as archivo:
         escritor = csv.writer(archivo)
         escritor.writerow(datos)
 
-def borrar_materia(materias_restantes):
-    datos = materias_restantes
-    with open('data\materias_test.csv', 'w', newline='', encoding='utf-8') as archivo:
+def actualizar_materias(materias_actualizadas):
+    datos = materias_actualizadas
+    with open('data\materias.csv', 'w', newline='', encoding='utf-8') as archivo:
         escritor = csv.writer(archivo)
         escritor.writerow(datos)
