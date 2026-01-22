@@ -46,4 +46,17 @@ class Calculadora:
                 m.creditos = input("Creditos: ")
                 m.nota = input("Nota: ")
         dh.actualizar_materias(self.materias)
-        
+    
+    def ver_estadisticas(self):
+        nota_promedio = 0
+        for m in self.materias:
+            nota_promedio += m.nota 
+        nota_promedio = nota_promedio/len(self.materias)
+        materias_fuertes = [m for m in self.materias if m.nota >= nota_promedio]
+        materias_debiles = [m for m in self.materias if m.nota < nota_promedio] 
+        print("Materias fuertes:")
+        for m in materias_fuertes:
+            print(m.codigo)
+        print("Materias debiles:")
+        for m in materias_debiles:
+            print(m.codigo)
