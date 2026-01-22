@@ -16,7 +16,7 @@ def escribir_materia(codigo, creditos, nota):
         escritor.writerow(datos)
 
 def actualizar_materias(materias_actualizadas):
-    datos = materias_actualizadas
+    datos = [(m.codigo, m.creditos, m.nota) for m in materias_actualizadas]
     with open('data\materias.csv', 'w', newline='', encoding='utf-8') as archivo:
         escritor = csv.writer(archivo)
-        escritor.writerow(datos)
+        escritor.writerows(datos)
