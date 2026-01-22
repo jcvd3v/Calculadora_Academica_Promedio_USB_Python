@@ -1,5 +1,5 @@
-# Sistema de Calificaciones USB. Sumar calificaciones USB y Creditos Inscritos. Calcular el promedio actual.  Identifica Estado de PP.
-# Features a desarrollar: Agregar Interfaz Grafica, Estadisticas de Materias o ramas Fuertes Y debiles para recomendar en cuales debe enfocarse. Modificar creditos y nota de materia (no hara falta simulador).
+# Sistema de Calificaciones USB. Sumar calificaciones USB y Creditos Inscritos. Calcular el promedio actual.  Identifica Estado de PP. Modifica nota y creditos de materia.
+# Features a desarrollar: Agregar Interfaz Grafica, Estadisticas de Materias o ramas Fuertes Y debiles.
 # Si es la primera vez que el usuario abre el programa (no existe archivo csv) que le pida ingresar materias.
 
 # ============== Modelos ============= #
