@@ -9,7 +9,12 @@ app = ctk.CTk()
 app.title("Calculadora Academica USB")
 app.geometry("600x400")
 
-# GUI
+# Grid settings. 2 Columns: Subjects/Buttons
+app.grid_columnconfigure(0, weight=3)  # Subjects Column
+app.grid_columnconfigure(1, weight=1)  # Buttons Column
+app.grid_rowconfigure(0,1)
+
+# Table
 frame = ctk.CTkFrame (
     app,
     border_width=2,
