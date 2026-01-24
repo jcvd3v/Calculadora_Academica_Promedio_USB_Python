@@ -31,22 +31,27 @@ frame_table.grid (
     pady=20, 
     sticky="nsew")
 
-frame_table.pack()
-
 # Table headers
 headers = ["ID", "Creditos", "Nota"]
 for i, head in enumerate(headers):
     label = ctk.CTkLabel(frame_table, text=head, font=ctk.CTkFont(weight="bold"))
     label.grid(row=0, column=i, padx=10, pady=5)
 
+# ----- RIGHT SECTION ----- #
 # Buttons
-btn_add = ctk.CTkButton(app, text="Agregar Materia")
+frame_controls = ctk.CTkFrame(app, fg_color="transparent")
+frame_controls.grid(row=0, column=1, padx=20, pady=20, sticky="nsew")
+
+btn_add = ctk.CTkButton(frame_controls, text="Agregar Materia")
 btn_add.pack()
-btn_delete = ctk.CTkButton(app, text="Eliminar Materia")
+
+btn_delete = ctk.CTkButton(frame_controls, text="Eliminar Materia")
 btn_delete.pack()
-btn_modify = ctk.CTkButton(app, text="Modificar Materia")
+
+btn_modify = ctk.CTkButton(frame_controls, text="Modificar Materia")
 btn_modify.pack()
-btn_stats = ctk.CTkButton(app, text="Ver Estadisticas")
+
+btn_stats = ctk.CTkButton(frame_controls, text="Ver Estadisticas")
 btn_stats.pack()
 
 # Run
