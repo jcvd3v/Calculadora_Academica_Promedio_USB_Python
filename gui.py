@@ -43,16 +43,16 @@ frame_controls = ctk.CTkFrame(app, fg_color="transparent")
 frame_controls.grid(row=0, column=1, padx=20, pady=20, sticky="nsew")
 
 btn_add = ctk.CTkButton(frame_controls, text="Agregar Materia")
-btn_add.pack()
+btn_add.pack(fill = "x", pady=10)
 
 btn_delete = ctk.CTkButton(frame_controls, text="Eliminar Materia")
-btn_delete.pack()
+btn_delete.pack(fill = "x", pady=10)
 
 btn_modify = ctk.CTkButton(frame_controls, text="Modificar Materia")
-btn_modify.pack()
+btn_modify.pack(fill = "x", pady=10)
 
 btn_stats = ctk.CTkButton(frame_controls, text="Ver Estadisticas")
-btn_stats.pack()
+btn_stats.pack(fill = "x", pady=10)
 
 # Average box
 lbl_average = ctk.CTkLabel(frame_controls, text=f"Promedio: 1",
