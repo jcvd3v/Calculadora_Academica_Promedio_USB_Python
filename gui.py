@@ -54,5 +54,14 @@ btn_modify.pack()
 btn_stats = ctk.CTkButton(frame_controls, text="Ver Estadisticas")
 btn_stats.pack()
 
+# Average box
+lbl_average = ctk.CTkLabel(frame_controls, text=f"Promedio: 1",
+                           height=60, 
+                           fg_color="white", 
+                           text_color="black",
+                           corner_radius=8)
+
+lbl_average.pack(side="bottom", fill="x", pady=20)
+
 # Run
 app.mainloop()
