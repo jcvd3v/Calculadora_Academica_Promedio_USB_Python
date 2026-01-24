@@ -14,6 +14,7 @@ app.grid_columnconfigure(0, weight=3)  # Subjects Column
 app.grid_columnconfigure(1, weight=1)  # Buttons Column
 app.grid_rowconfigure(0,weight=1)
 
+# ----- LEFT SECTION ----- #
 # Table
 frame_table = ctk.CTkScrollableFrame (
     app,
@@ -31,6 +32,12 @@ frame_table.grid (
     sticky="nsew")
 
 frame_table.pack()
+
+# Table headers
+headers = ["ID", "Creditos", "Nota"]
+for i, head in enumerate(headers):
+    label = ctk.CTkLabel(frame_table, text=head, font=ctk.CTkFont(weight="bold"))
+    label.grid(row=0, column=i, padx=10, pady=5)
 
 # Buttons
 btn_add = ctk.CTkButton(app, text="Agregar Materia")
