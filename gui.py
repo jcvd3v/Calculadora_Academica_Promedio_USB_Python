@@ -1,4 +1,9 @@
 import customtkinter as ctk
+from src.models.materia import Materia
+import src.utils.data_handler as dh
+
+# Read CSV
+subjects = dh.leer_materias()
 
 # Appearance.
 ctk.set_appearance_mode("dark")
@@ -36,6 +41,15 @@ headers = ["ID", "Creditos", "Nota"]
 for i, head in enumerate(headers):
     label = ctk.CTkLabel(frame_table, text=head, font=ctk.CTkFont(weight="bold"))
     label.grid(row=0, column=i, padx=10, pady=5)
+
+# Render Subjects in table
+def render_subjects(subjects):
+    for r, row_data in enumerate(subjects):
+            for c, val in enumerate(row_data):
+                 lbl = ctk.CTkLabel(frame_table, text=str(val))
+                 lbl.grid(row=r+1, column=c, padx=10, pady=2)
+
+render_subjects(subjects)
 
 # ----- RIGHT SECTION ----- #
 # Buttons
