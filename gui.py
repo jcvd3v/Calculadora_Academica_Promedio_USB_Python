@@ -43,14 +43,15 @@ for i, head in enumerate(headers):
     label.grid(row=0, column=i, padx=10, pady=5)
 
 # Render Subjects in table
+'''
 def render_subjects(subjects):
-    for r, row_data in enumerate(subjects):
-            for c, val in enumerate(row_data):
+    for n, m in enumerate(subjects):
+            for c, val in enumerate(m):
                  lbl = ctk.CTkLabel(frame_table, text=str(val))
                  lbl.grid(row=r+1, column=c, padx=10, pady=2)
 
 render_subjects(subjects)
-
+'''
 # ----- RIGHT SECTION ----- #
 # Buttons
 frame_controls = ctk.CTkFrame(app, fg_color="transparent")
