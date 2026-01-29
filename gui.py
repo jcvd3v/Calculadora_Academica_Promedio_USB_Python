@@ -43,15 +43,18 @@ for i, head in enumerate(headers):
     label.grid(row=0, column=i, padx=10, pady=5)
 
 # Render Subjects in table
-'''
+
 def render_subjects(subjects):
-    for n, m in enumerate(subjects):
-            for c, val in enumerate(m):
-                 lbl = ctk.CTkLabel(frame_table, text=str(val))
-                 lbl.grid(row=r+1, column=c, padx=10, pady=2)
+    for n, m in enumerate(subjects):  # n=index, m=subject instance
+        lblco = ctk.CTkLabel(frame_table,text=str(m.codigo))
+        lblco.grid(row=n+1, column=0, padx=10, pady=2)
+        lblcr = ctk.CTkLabel(frame_table,text=str(m.creditos))
+        lblcr.grid(row=n+1, column=1, padx=10, pady=2)
+        lblno = ctk.CTkLabel(frame_table,text=str(m.nota))
+        lblno.grid(row=n+1, column=2, padx=10, pady=2)
 
 render_subjects(subjects)
-'''
+
 # ----- RIGHT SECTION ----- #
 # Buttons
 frame_controls = ctk.CTkFrame(app, fg_color="transparent")
