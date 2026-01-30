@@ -1,9 +1,14 @@
 import customtkinter as ctk
 from src.models.materia import Materia
+from src.logic.calculadora import Calculadora
 import src.utils.data_handler as dh
 
 # Read CSV
 subjects = dh.leer_materias()
+
+# Calculator
+calculadora = Calculadora(subjects)
+average = calculadora.promedio()
 
 # Appearance.
 ctk.set_appearance_mode("dark")
@@ -73,7 +78,7 @@ btn_stats = ctk.CTkButton(frame_controls, text="Ver Estadisticas")
 btn_stats.pack(fill = "x", pady=10)
 
 # Average box
-lbl_average = ctk.CTkLabel(frame_controls, text=f"Promedio: 1",
+lbl_average = ctk.CTkLabel(frame_controls, text=f"Promedio: {round(average, 2)}",
                            height=60, 
                            fg_color="white", 
                            text_color="black",
