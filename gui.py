@@ -14,7 +14,44 @@ average = calculadora.promedio()
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
 
-# Window settings
+# Windows
+def open_add_window():
+    window =ctk.CTkToplevel(app)
+    window.title("Agregar Materia")
+    entry_id = ctk.CTkEntry(
+        window, width=300, 
+        height=40, 
+        placeholder_text="ID"
+    )
+    entry_id.pack(pady=20)
+    entry_creditos = ctk.CTkEntry(
+        window, width=300, 
+        height=40, 
+        placeholder_text="Creditos"
+    )
+    entry_creditos.pack(pady=20)
+    entry_nota = ctk.CTkEntry(
+        window, width=300, 
+        height=40, 
+        placeholder_text="Nota"
+    )
+    entry_nota.pack(pady=20)
+    btn_add = ctk.CTkButton(window, text="Agregar Materia")
+    btn_add.pack(fill = "x", pady=10)
+
+def open_delete_window():
+    window =ctk.CTkToplevel(app)
+    window.title("Eliminar Materia")
+def open_modify_window():
+    window =ctk.CTkToplevel(app)
+    window.title("Modificar Materia")
+def open_stats_window():
+    window =ctk.CTkToplevel(app)
+    window.title("Estadísticas")
+
+
+
+# Main Window settings
 app = ctk.CTk()
 app.title("Calculadora Academica USB")
 app.geometry("600x400")
@@ -65,16 +102,16 @@ render_subjects(subjects)
 frame_controls = ctk.CTkFrame(app, fg_color="transparent")
 frame_controls.grid(row=0, column=1, padx=20, pady=20, sticky="nsew")
 
-btn_add = ctk.CTkButton(frame_controls, text="Agregar Materia")
+btn_add = ctk.CTkButton(frame_controls, text="Agregar Materia", command=open_add_window)
 btn_add.pack(fill = "x", pady=10)
 
-btn_delete = ctk.CTkButton(frame_controls, text="Eliminar Materia")
+btn_delete = ctk.CTkButton(frame_controls, text="Eliminar Materia", command=open_delete_window)
 btn_delete.pack(fill = "x", pady=10)
 
-btn_modify = ctk.CTkButton(frame_controls, text="Modificar Materia")
+btn_modify = ctk.CTkButton(frame_controls, text="Modificar Materia", command=open_modify_window)
 btn_modify.pack(fill = "x", pady=10)
 
-btn_stats = ctk.CTkButton(frame_controls, text="Ver Estadisticas")
+btn_stats = ctk.CTkButton(frame_controls, text="Ver Estadisticas", command=open_stats_window)
 btn_stats.pack(fill = "x", pady=10)
 
 # Average box
