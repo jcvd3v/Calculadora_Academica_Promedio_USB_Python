@@ -15,6 +15,8 @@ ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
 
 # Windows
+
+# Add subjects window
 def open_add_window():
     window =ctk.CTkToplevel(app)
     window.title("Agregar Materia")
@@ -36,7 +38,21 @@ def open_add_window():
         placeholder_text="Nota"
     )
     entry_nota.pack(pady=20)
-    btn_add = ctk.CTkButton(window, text="Agregar Materia")
+
+    # Functions
+
+    def agregar():
+        calculadora.agregar_materia_gui(
+            entry_id.get(), 
+            int(entry_creditos.get()), 
+            int(entry_nota.get()))
+        render_subjects(subjects)
+    
+    btn_add = ctk.CTkButton(
+        window, 
+        text="Agregar Materia", 
+        command=agregar
+            )
     btn_add.pack(fill = "x", pady=10)
 
 def open_delete_window():
