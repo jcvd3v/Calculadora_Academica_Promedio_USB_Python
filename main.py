@@ -22,7 +22,11 @@ if __name__ == "__main__":
             print(calculadora.promedio())
             calculadora.periodo_de_prueba()
         elif entrada == "3":
-            calculadora.agregar_materia()
+            calculadora.agregar_materia(
+                input("ID: "),
+                int(input("Creditos: ")), 
+                int(input("Nota Obtenida: "))
+            )
         elif entrada == "4":
             calculadora.eliminar_materia()
         elif entrada == "5":

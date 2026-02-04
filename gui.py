@@ -42,7 +42,7 @@ def open_add_window():
     # Functions
 
     def agregar():
-        calculadora.agregar_materia_gui(
+        calculadora.agregar_materia(
             entry_id.get(), 
             int(entry_creditos.get()), 
             int(entry_nota.get()))

@@ -26,15 +26,8 @@ class Calculadora:
     def mostrar_materias(self):
         for materia in self.materias:
             print (f"{materia.codigo} Creditos: {materia.creditos} Nota Obtenida: {materia.nota}")
-    
-    def agregar_materia(self):
-        codigo = input("ID: ")
-        creditos = int(input("Creditos: "))
-        nota = int(input("Nota Obtenida: "))
-        self.materias.append(Materia(codigo, creditos, nota))
-        dh.escribir_materia(codigo, float(creditos), float(nota))
 
-    def agregar_materia_gui(self, codigo, creditos, nota):
+    def agregar_materia(self, codigo, creditos, nota):
         self.materias.append(Materia(codigo, creditos, nota))
         dh.escribir_materia(codigo, float(creditos), float(nota))
 
