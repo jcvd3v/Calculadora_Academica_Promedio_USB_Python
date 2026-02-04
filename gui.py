@@ -58,6 +58,29 @@ def open_add_window():
 def open_delete_window():
     window =ctk.CTkToplevel(app)
     window.title("Eliminar Materia")
+    entry_id = ctk.CTkEntry(
+        window, width=300, 
+        height=40, 
+        placeholder_text="ID"
+    )
+    entry_id.pack(pady=20)
+
+    # Functions
+
+    def eliminar():
+        calculadora.eliminar_materia(
+            entry_id.get() 
+            )
+        render_subjects(subjects)
+    
+    btn_del = ctk.CTkButton(
+        window, 
+        text="Eliminar Materia", 
+        command=eliminar
+            )
+    btn_del.pack(fill = "x", pady=10)
+
+
 def open_modify_window():
     window =ctk.CTkToplevel(app)
     window.title("Modificar Materia")

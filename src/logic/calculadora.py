@@ -31,8 +31,7 @@ class Calculadora:
         self.materias.append(Materia(codigo, creditos, nota))
         dh.escribir_materia(codigo, float(creditos), float(nota))
 
-    def eliminar_materia(self):
-        codigo = input("ID: ")
+    def eliminar_materia(self, codigo):
         self.materias = [m for m in self.materias if m.codigo != codigo]
         dh.actualizar_materias(self.materias)
 

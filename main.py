@@ -28,7 +28,9 @@ if __name__ == "__main__":
                 int(input("Nota Obtenida: "))
             )
         elif entrada == "4":
-            calculadora.eliminar_materia()
+            calculadora.eliminar_materia(
+                input("ID: ")
+            )
         elif entrada == "5":
             calculadora.modificar_materia()
         elif entrada == "6":
