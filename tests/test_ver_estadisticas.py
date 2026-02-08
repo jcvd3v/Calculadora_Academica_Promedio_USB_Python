@@ -9,3 +9,4 @@ materias = dh.leer_materias()
 calculadora = Calculadora(materias)
 
 calculadora.ver_estadisticas()
+

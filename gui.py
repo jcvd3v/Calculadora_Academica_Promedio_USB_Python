@@ -71,6 +71,7 @@ def open_delete_window():
         calculadora.eliminar_materia(
             entry_id.get() 
             )
+        subjects = dh.leer_materias()
         render_subjects(subjects)
     
     btn_del = ctk.CTkButton(
