@@ -46,7 +46,7 @@ def open_add_window():
             entry_id.get(), 
             int(entry_creditos.get()), 
             int(entry_nota.get()))
-        render_subjects(subjects)
+        render_subjects(calculadora.materias)
     
     btn_add = ctk.CTkButton(
         window, 
@@ -71,8 +71,7 @@ def open_delete_window():
         calculadora.eliminar_materia(
             entry_id.get() 
             )
-        subjects = dh.leer_materias()
-        render_subjects(subjects)
+        render_subjects(calculadora.materias)
     
     btn_del = ctk.CTkButton(
         window, 
@@ -135,7 +134,7 @@ def render_subjects(subjects):
         lblno = ctk.CTkLabel(frame_table,text=str(m.nota))
         lblno.grid(row=n+1, column=2, padx=10, pady=2)
 
-render_subjects(subjects)
+render_subjects(calculadora.materias)
 
 # ----- RIGHT SECTION ----- #
 # Buttons

@@ -1,0 +1,8 @@
+data handler
+escribir materia funciona con datos
+y actualizar materia funciona con objetos y atributos.
+
+calculadora
+agregar materia y eliminar materia (a nivel de calculadora trabajan con objetos)
+
+hacer que la gui trbaje con las materias de calculadora en lugar de directamente acceder al csv, para mantener consistencia
