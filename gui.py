@@ -39,9 +39,9 @@ def open_add_window():
     )
     entry_nota.pack(pady=20)
 
-    # Functions
+    # ADD SUBJECT BUTTON
 
-    def agregar():
+    def add():
         calculadora.agregar_materia(
             entry_id.get(), 
             int(entry_creditos.get()), 
@@ -51,7 +51,7 @@ def open_add_window():
     btn_add = ctk.CTkButton(
         window, 
         text="Agregar Materia", 
-        command=agregar
+        command=add
             )
     btn_add.pack(fill = "x", pady=10)
 
@@ -65,9 +65,9 @@ def open_delete_window():
     )
     entry_id.pack(pady=20)
 
-    # Functions
+    # DELETE SUBJECT BUTTON
 
-    def eliminar():
+    def delete():
         calculadora.eliminar_materia(
             entry_id.get() 
             )
@@ -76,7 +76,7 @@ def open_delete_window():
     btn_del = ctk.CTkButton(
         window, 
         text="Eliminar Materia", 
-        command=eliminar
+        command=delete
             )
     btn_del.pack(fill = "x", pady=10)
 
@@ -84,6 +84,9 @@ def open_delete_window():
 def open_modify_window():
     window =ctk.CTkToplevel(app)
     window.title("Modificar Materia")
+
+
+
 def open_stats_window():
     window =ctk.CTkToplevel(app)
     window.title("Estadísticas")
